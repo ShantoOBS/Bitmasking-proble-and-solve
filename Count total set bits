@@ -1,0 +1,10 @@
+int countSetBits(int N)
+{
+    //Write your code here
+    int count_bit=0;
+    for(int i=1;i<=N;i++){
+      count_bit+=__builtin_popcount(i);
+        
+    }
+    return count_bit;
+}
