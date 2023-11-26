@@ -1,0 +1,8 @@
+bool isKthBitSet(int n, int k)
+{
+    // Write your code here.
+
+     int ans = n & (1<<k-1);
+
+    return (ans>>k-1) & 1;
+}
