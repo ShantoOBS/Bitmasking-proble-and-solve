@@ -1,10 +1,25 @@
-int countSetBits(int N)
+#include<bits/stdc++.h>
+using namespace std;
+void print(int n){
+    
+    for(int i=31;i>=0;i--){
+        cout<<((n>>i)&1);
+    }
+    cout<<endl;
+}
+int main()
 {
-    //Write your code here
-    int count_bit=0;
+
+ int N;
+ cin>>N;
+ int count_bit=0;
     for(int i=1;i<=N;i++){
+        print(i);
       count_bit+=__builtin_popcount(i);
+      
         
     }
-    return count_bit;
+    cout<<count_bit;
+    
+   
 }
