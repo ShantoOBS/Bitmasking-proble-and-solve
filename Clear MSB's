@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+void print(int n){
+    
+    for(int i=31;i>=0;i--){
+        cout<<((n>>i)&1);
+    }
+    cout<<endl;
+}
+int main()
+{
+   
+  int a=59;
+  int i=3;
+  print(59);
+  
+  int b=(a&((1<<i+1)-1));
+  print(1<<i+1);
+  print((1<<i+1)-1);
+  
+   //0000111011 --59
+  //0000001111-- ((1<<i+1)-1)  second
+  //0000010000 --(1<<i+1) first
+  
+  
+  print(b);
+   
+   
+   
+}
