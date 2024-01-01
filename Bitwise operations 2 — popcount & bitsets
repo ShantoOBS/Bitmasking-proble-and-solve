@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+void print(int n){
+    
+    for(int i=31;i>=0;i--){
+        cout<<((n>>i)&1);
+    }
+    cout<<endl;
+}
+int main()
+{
+   
+  int n;
+  cin>>n;
+  vector<int>masks(n,0);
+  for(int i=0;i<n;i++){
+     int num_workers;
+     cin>>num_workers;
+     int mask=0;
+     for(int i=0;i<num_workers;i++){
+         int days;
+         cin>>days;
+         mask=(mask| (1<<days));
+     }
+     masks[i]=mask;
+  }
+  int max_days=0;
+  for(int i=0;i<n;i++){
+      for(int j=i+1;j<n;j++){
+          int interscetion=(masks[i]&masks[j]);
+          int common_days=__builtin_popcount(interscetion);
+          max_days=max(max_days,common_days);
+          
+          
+      }
+     
+      
+  }
+   cout<<max_days;
+ 
+   
+}
