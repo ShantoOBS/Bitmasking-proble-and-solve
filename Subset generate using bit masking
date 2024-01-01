@@ -25,6 +25,7 @@ void print(int n){
           ans.emplace_back(subset);
           
       }
+// O(n*(2^n))
       return ans;
         
     }
